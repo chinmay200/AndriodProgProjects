@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">digitbits</string>
+    <string name="num_1">Num 1 :-</string>
+    <string name="num_2">Num 2 :-</string>
+    <string name="subtract">subtract</string>
+    <string name="multiply">Multiply</string>
+    <string name="division">division</string>
+</resources>
