@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/grape"
+        android:icon="@drawable/ic_baseline_grass_24"
+        android:title="@string/grape"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/apple"
+        android:icon="@drawable/ic_baseline_adb_24"
+        android:title="@string/apple"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/orange"
+        android:icon="@drawable/ic_baseline_ac_unit_24"
+        android:title="@string/orange"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/banana"
+        android:icon="@drawable/ic_baseline_airport_shuttle_24"
+        android:title="@string/banana"
+        app:showAsAction="never"/>
+</menu>
