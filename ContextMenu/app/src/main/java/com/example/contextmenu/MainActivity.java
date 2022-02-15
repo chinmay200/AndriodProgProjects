@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 findViewById(R.id.appleimg).setVisibility(View.INVISIBLE);
                 findViewById(R.id.bananaimg).setVisibility(View.VISIBLE);
                 fruit.setText("Banana");
+                break;
 
             case R.id.grape:
                 Toast.makeText(this, "Grape", Toast.LENGTH_SHORT).show();
