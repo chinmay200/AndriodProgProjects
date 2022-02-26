@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SpinnerMenuDropDown</string>
+    <string-array name="items">
+        <item>
+            Apple
+        </item>
+        <item>
+            Orange
+        </item>
+        <item>
+            Grape
+        </item>
+        <item>
+            Banana
+        </item>
+    </string-array>
+</resources>
