@@ -5,4 +5,5 @@
     <string name="banana">Banana</string>
     <string name="grape">Grape</string>
     <string name="pop_up_menu">Pop Up Menu</string>
+    <string name="enter_fruits">Enter Fruits</string>
 </resources>
