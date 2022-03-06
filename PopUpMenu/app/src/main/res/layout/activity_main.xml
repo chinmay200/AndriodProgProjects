@@ -47,51 +47,14 @@
         app:layout_constraintVertical_bias="0.148" />
 
     <ImageView
-        android:id="@+id/appleimg"
+        android:id="@+id/image"
         android:layout_width="320dp"
         android:layout_height="369dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/apple" />
-
-    <ImageView
-        android:id="@+id/bananaimg"
-        android:layout_width="320dp"
-        android:layout_height="369dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/banana" />
-
-    <ImageView
-        android:id="@+id/grapeimg"
-        android:layout_width="320dp"
-        android:layout_height="369dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/grape" />
-
-    <ImageView
-        android:id="@+id/orangeimg"
-        android:layout_width="320dp"
-        android:layout_height="369dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/orange" />
+        app:layout_constraintVertical_bias="0.504" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
