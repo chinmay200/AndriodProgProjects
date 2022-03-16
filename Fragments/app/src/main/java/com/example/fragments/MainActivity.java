@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
                 bundle.putString("circle_fragment","circle");
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.add(R.id.frameLayout , circle.class,bundle);
-//                fragmentTransaction.setReorderingAllowed(true);
+                fragmentTransaction.replace(R.id.frameLayout , circle.class,bundle);
+                fragmentTransaction.setReorderingAllowed(true);
                 fragmentTransaction.addToBackStack("circle");
                 fragmentTransaction.commit();
             }
@@ -39,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
                 bundle.putString("square_fragment","square");
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.add(R.id.frameLayout , square.class,bundle);
-//                fragmentTransaction.setReorderingAllowed(true);
+                fragmentTransaction.replace(R.id.frameLayout , square.class,bundle);
+                fragmentTransaction.setReorderingAllowed(true);
                 fragmentTransaction.addToBackStack("square");
                 fragmentTransaction.commit();
             }
