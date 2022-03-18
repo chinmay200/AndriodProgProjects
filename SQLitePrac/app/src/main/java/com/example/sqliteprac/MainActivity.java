@@ -8,6 +8,8 @@ import android.util.Log;
 import com.example.sqliteprac.Modal.Toy;
 import com.example.sqliteprac.data.MyDbHandler;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -38,5 +40,11 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d("Check" , Integer.toString(toy.getId()) + Integer.toString(toy1.getId()) + Integer.toString(toy2.getId()));
 
+        //Retrieving all toys
+        ArrayList<Toy> allToys = db.getToys();
+        for (Toy t:
+             allToys) {
+            Log.d("AllToys" , t.getType() + " " + t.getToy());
+        }
     }
 }

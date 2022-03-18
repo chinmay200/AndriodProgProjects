@@ -2,6 +2,7 @@ package com.example.sqliteprac.data;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -10,6 +11,9 @@ import androidx.annotation.Nullable;
 
 import com.example.sqliteprac.Modal.Toy;
 import com.example.sqliteprac.Params.Params;
+
+import java.util.ArrayList;
+import java.util.Currency;
 
 public class MyDbHandler extends SQLiteOpenHelper {
     public MyDbHandler(@Nullable Context context) {
@@ -37,5 +41,28 @@ public class MyDbHandler extends SQLiteOpenHelper {
         db.insert(Params.TABLE_NAME , null ,contentValues);
         Log.d("table" , "Data successfully entered");
         db.close();
+    }
+
+    public ArrayList<Toy> getToys(){
+        ArrayList<Toy> toys = new ArrayList<>();
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        //Query for fetching all data
+        String query = "SELECT * FROM " + Params.TABLE_NAME;
+
+        Cursor cursor = sqLiteDatabase.rawQuery(query, null);
+        cursor.moveToFirst();
+        do{
+            Toy t = new Toy();
+            t.setId(Integer.parseInt(cursor.getString(0)));
+            t.setToy(cursor.getString(1));
+            t.setType(cursor.getString(2));
+
+            //Add the data collected sequence wise to toys
+            toys.add(t);
+
+        }while(cursor.moveToNext());
+
+        return toys;
     }
 }
