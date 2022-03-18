@@ -42,15 +42,17 @@ public class MainActivity extends AppCompatActivity {
 
         //Retrieving all toys
         ArrayList<Toy> allToys = db.getToys();
-        for (Toy t:
-             allToys) {
+        for (Toy t : allToys) {
             Log.d("AllToys" , t.getType() + " " + t.getToy()  + " " + Integer.toString(t.getId()));
         }
 
-        toy2.setId(25);
-        toy2.setToy("Knife set");
-        toy2.setType("hard and unsafe for kids");
 
+        toy2.setId(25);
         int row = db.updateToy(toy2);
+
+        toy2.setId(18);
+        db.deleteToy(toy2);
+
+        Log.d("count" , " number of toys " + Integer.toString(db.totalToys()));
     }
 }

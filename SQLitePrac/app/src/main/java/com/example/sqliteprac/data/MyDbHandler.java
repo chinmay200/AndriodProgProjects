@@ -81,4 +81,21 @@ public class MyDbHandler extends SQLiteOpenHelper {
         //updates the row with where clause is matched and returns the number of affected rows
         return sqLiteDatabase.update(Params.TABLE_NAME , values , Params.KEY_ID+"=?", id );
     }
+
+
+    public void deleteToy(Toy tid){
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        String [] id = {Integer.toString(tid.getId())};
+        sqLiteDatabase.delete(Params.TABLE_NAME ,Params.KEY_ID + "=?" , id);
+        sqLiteDatabase.close();
+    }
+
+    public int totalToys(){
+        String query = "SELECT * FROM " + Params.TABLE_NAME;
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery(query , null);
+
+        return cursor.getCount();
+    }
 }
