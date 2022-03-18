@@ -44,7 +44,13 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Toy> allToys = db.getToys();
         for (Toy t:
              allToys) {
-            Log.d("AllToys" , t.getType() + " " + t.getToy());
+            Log.d("AllToys" , t.getType() + " " + t.getToy()  + " " + Integer.toString(t.getId()));
         }
+
+        toy2.setId(25);
+        toy2.setToy("Knife set");
+        toy2.setType("hard and unsafe for kids");
+
+        int row = db.updateToy(toy2);
     }
 }

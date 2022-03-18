@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import com.example.sqliteprac.Modal.Toy;
 import com.example.sqliteprac.Params.Params;
 
+import java.security.PrivilegedAction;
 import java.util.ArrayList;
 import java.util.Currency;
 
@@ -64,5 +65,20 @@ public class MyDbHandler extends SQLiteOpenHelper {
         }while(cursor.moveToNext());
 
         return toys;
+    }
+
+    public int updateToy(Toy toy){
+
+        //Create db object
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+
+        //create content values for data edition or access
+        ContentValues values = new ContentValues();
+        values.put(Params.KEY_NAME , toy.getToy());
+        values.put(Params.KEY_TYPE , toy.getType());
+        String [] id = {Integer.toString(toy.getId())};
+
+        //updates the row with where clause is matched and returns the number of affected rows
+        return sqLiteDatabase.update(Params.TABLE_NAME , values , Params.KEY_ID+"=?", id );
     }
 }
